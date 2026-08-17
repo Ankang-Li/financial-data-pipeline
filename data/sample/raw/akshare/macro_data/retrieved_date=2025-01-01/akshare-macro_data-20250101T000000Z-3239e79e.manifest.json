@@ -1,0 +1,41 @@
+{
+  "snapshot_id": "akshare-macro_data-20250101T000000Z-3239e79e",
+  "source": "akshare",
+  "dataset": "macro_data",
+  "payload_file": "akshare-macro_data-20250101T000000Z-3239e79e.csv",
+  "retrieved_at": "2025-01-01T00:00:00+00:00",
+  "row_count": 1557,
+  "columns": [
+    "日期",
+    "中国国债收益率2年",
+    "中国国债收益率5年",
+    "中国国债收益率10年",
+    "中国国债收益率30年",
+    "美国国债收益率10年"
+  ],
+  "column_dtypes": {
+    "日期": "string",
+    "中国国债收益率2年": "float",
+    "中国国债收益率5年": "float",
+    "中国国债收益率10年": "float",
+    "中国国债收益率30年": "float",
+    "美国国债收益率10年": "float"
+  },
+  "checksum_sha256": "be1258e0d1959f0cddfa69024c3d8dcb71041cf10623d62d6b90a7702c098a19",
+  "params": {
+    "plan": "China government bond yield curve plus the US 10y as published in China",
+    "symbols": [
+      "CN2Y",
+      "CN5Y",
+      "CN10Y",
+      "CN30Y",
+      "US10Y"
+    ]
+  },
+  "run_id": "20260817T091804Z-0f02ac76",
+  "pipeline_version": "0.1.0",
+  "mode": "offline",
+  "synthetic": true,
+  "replayed_from": null,
+  "notes": "synthetic China yields; US10y injected 100x (bp), 30y stale, gap"
+}

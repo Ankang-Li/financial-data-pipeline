@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financial-data-pipeline"
+version = "0.1.0"
+description = "Research-oriented financial data infrastructure: reproducible ingestion, validation, normalization and analytical storage for quantitative research."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ankang Li" }]
+keywords = ["financial-data", "data-pipeline", "data-validation", "duckdb", "quantitative-research"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Office/Business :: Financial :: Investment",
+  "Intended Audience :: Financial and Insurance Industry",
+]
+dependencies = [
+  "pandas>=2.0",
+  "duckdb>=0.10",
+  "pydantic>=2.5",
+  "requests>=2.31",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+# Live source clients are optional on purpose: the offline demo, the test suite
+# and CI must run without network access or API keys.
+live = ["yfinance>=0.2.40", "akshare>=1.13"]
+dev = ["pytest>=8.0", "ruff>=0.5", "matplotlib>=3.8"]
+
+[project.scripts]
+fdp = "pipeline.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Ankang-Li/financial-data-pipeline"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]

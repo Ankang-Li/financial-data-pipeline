@@ -1,0 +1,43 @@
+{
+  "snapshot_id": "yahoo-market_prices-20250101T000000Z-7e03c7d0",
+  "source": "yahoo",
+  "dataset": "market_prices",
+  "payload_file": "yahoo-market_prices-20250101T000000Z-7e03c7d0.csv",
+  "retrieved_at": "2025-01-01T00:00:00+00:00",
+  "row_count": 4686,
+  "columns": [
+    "date",
+    "ticker",
+    "open",
+    "high",
+    "low",
+    "close",
+    "adj_close",
+    "volume"
+  ],
+  "column_dtypes": {
+    "date": "string",
+    "ticker": "string",
+    "open": "float",
+    "high": "float",
+    "low": "float",
+    "close": "float",
+    "adj_close": "float",
+    "volume": "int"
+  },
+  "checksum_sha256": "72b60b20c9fa20c38a141af1fab312cd8f547562b0746b40630114c15092f766",
+  "params": {
+    "plan": "US equity, long Treasury and gold ETFs — daily OHLCV",
+    "symbols": [
+      "SPY",
+      "TLT",
+      "GLD"
+    ]
+  },
+  "run_id": "20260817T091804Z-0f02ac76",
+  "pipeline_version": "0.1.0",
+  "mode": "offline",
+  "synthetic": true,
+  "replayed_from": null,
+  "notes": "synthetic OHLCV; SPY +50% day, GLD 12bd gap"
+}

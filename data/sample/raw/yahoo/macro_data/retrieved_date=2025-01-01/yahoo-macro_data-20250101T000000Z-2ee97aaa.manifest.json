@@ -1,0 +1,41 @@
+{
+  "snapshot_id": "yahoo-macro_data-20250101T000000Z-2ee97aaa",
+  "source": "yahoo",
+  "dataset": "macro_data",
+  "payload_file": "yahoo-macro_data-20250101T000000Z-2ee97aaa.csv",
+  "retrieved_at": "2025-01-01T00:00:00+00:00",
+  "row_count": 1566,
+  "columns": [
+    "date",
+    "ticker",
+    "open",
+    "high",
+    "low",
+    "close",
+    "adj_close",
+    "volume"
+  ],
+  "column_dtypes": {
+    "date": "string",
+    "ticker": "string",
+    "open": "float",
+    "high": "float",
+    "low": "float",
+    "close": "float",
+    "adj_close": "float",
+    "volume": "int"
+  },
+  "checksum_sha256": "e745e8e049b6d4b3b621aa76d23d84842276bc2b48ebe2175dde230890dcaf92",
+  "params": {
+    "plan": "CBOE 10-year Treasury yield index, quoted in tenths of a percent",
+    "symbols": [
+      "^TNX"
+    ]
+  },
+  "run_id": "20260817T091804Z-0f02ac76",
+  "pipeline_version": "0.1.0",
+  "mode": "offline",
+  "synthetic": true,
+  "replayed_from": null,
+  "notes": "synthetic OHLCV; SPY +50% day, GLD 12bd gap"
+}

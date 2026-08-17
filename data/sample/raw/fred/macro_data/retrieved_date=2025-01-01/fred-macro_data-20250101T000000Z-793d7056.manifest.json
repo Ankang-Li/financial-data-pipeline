@@ -1,0 +1,34 @@
+{
+  "snapshot_id": "fred-macro_data-20250101T000000Z-793d7056",
+  "source": "fred",
+  "dataset": "macro_data",
+  "payload_file": "fred-macro_data-20250101T000000Z-793d7056.csv",
+  "retrieved_at": "2025-01-01T00:00:00+00:00",
+  "row_count": 6264,
+  "columns": [
+    "date",
+    "series_id",
+    "value"
+  ],
+  "column_dtypes": {
+    "date": "string",
+    "series_id": "string",
+    "value": "string"
+  },
+  "checksum_sha256": "b380a19129c5a6d564848d8d6728ae4b8dc937aa4e63088ddf50df24cb30b00c",
+  "params": {
+    "plan": "US 10y/2y Treasury yields, CPI level and VIX from FRED",
+    "symbols": [
+      "DGS10",
+      "DGS2",
+      "CPIAUCSL",
+      "VIXCLS"
+    ]
+  },
+  "run_id": "20260817T091804Z-0f02ac76",
+  "pipeline_version": "0.1.0",
+  "mode": "offline",
+  "synthetic": true,
+  "replayed_from": null,
+  "notes": "synthetic FRED; VIX missing stretch"
+}
